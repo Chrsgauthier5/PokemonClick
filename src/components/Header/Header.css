@@ -1,0 +1,22 @@
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+
+.header {
+    text-align: center;
+    margin-top:90px;
+    margin-bottom: 15px;
+    color: rgb(60, 90, 166);
+    font-family: "Palatino Linotype", "Book Antiqua", serif;
+    background-color: white;
+    animation-name: example;
+    animation-duration: 10s;
+    background-color: rgb(255, 203, 5);
+  }
+
+
+

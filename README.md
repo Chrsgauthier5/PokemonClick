@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hello Bootstrap
 
-## Available Scripts
+In this activity, we will utilize Bootstrap CSS and render components utilizing Bootstrap classes.
 
-In the project directory, you can run:
+## Instructions
 
-### `npm start`
+* Replace your application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `yarn start`.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Add a Bootstrap CDN to the head of your React application's `index.html` file inside `public/index.html`.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+```
 
-### `npm test`
+* Inside of the `src/components` folder, create a brand new file named `HelloBootstrap.js`. Add code to this file to accomplish the following:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * It should render a [Bootstrap Navbar](https://getbootstrap.com/docs/4.0/components/navbar/), followed by a [Bootstrap Jumbotron](https://getbootstrap.com/docs/4.0/components/jumbotron/), and lastly a [Bootstrap Card](https://getbootstrap.com/docs/4.0/components/card/).
 
-### `npm run build`
+  * Set the default export of this file to be your `HelloBootstrap` component.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Update the `src/App.js` file so that it imports the `src/components/HelloBootstrap.js` file. Render the `HelloBootstrap` component instead of the paragraph that is currently being rendered.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Hints
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* In order to return separate JSX elements from a function, all of the higher level elements need a single parent, e.g., usually a `div`.
 
-### `npm run eject`
+* All JSX tags must either have an adjacent tag or else have a self-closing forward slash.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* `className` must be used to describe an element's `class` property since `class` is a reserved word in JavaScript.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Remember to import the `react` library in any file where JSX is utilized. Inspect some of the other files provided with the starter code if you're having difficulty remembering the syntax for this.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Bonus
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Instead of having all of your Bootstrap code inside of a single component, create three separate components for the Navbar, Jumbotron, and Card. Render these components inside of the App component.
